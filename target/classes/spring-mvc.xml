@@ -21,10 +21,12 @@
 		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.2.xsd">
 	
 		<!-- 配置Controller -->
+		<!-- 
 		<bean id = "helloController" class = "three.controller.HelloController" />
-		
+		 -->
 		<!-- 配置HandlerMapping -->
 		<!-- 告诉DispatcherServlet,请求路径与Controller(处理器)的对应关系 -->
+		<!-- 
 		<bean class = "org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
 			<property name="mappings">
 				<props>
@@ -32,6 +34,7 @@
 				</props>
 			</property>
 		</bean>
+		 -->
 		<!-- 配置ViewResolver -->
 		<!-- 告诉DispatcherServlet,视图名对应的视图对象(比如某个jsp) -->
 		<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
@@ -39,7 +42,7 @@
 			<property name="suffix" value = ".jsp"></property>
 		</bean>
 		<!-- 配置组件扫描 -->
-		<context:component-scan base-package="hellocontroller"/>
+		<context:component-scan base-package="four.controller"/>
 		<!-- 配置MVC注解扫描 -->
 		<mvc:annotation-driven/>
 </beans>
